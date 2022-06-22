@@ -1,15 +1,12 @@
-#include <stdio.h>
-int number1(int n)
-{
-	int i = 0;
-	while(i<n){
-		fprintf(stdout, "-");
-		i++;
-		}
+#include <iostream>
+using namespace std;
+
+void printSymbols(int n) {
+	for (int i = 0; i < n; ++i)
+		cout << '-';
 }
-int main()
-{
-	int N;
-	fscanf(stdin, "%i", &N);
-	number1(N);
+int main() {
+	int N; cin >> N;
+	printSymbols(N);
+
 }

@@ -1,15 +1,13 @@
-#include <stdio.h>
-int number1(int n)
-{
-	while(n!=0)
-	{
-	fprintf(stdout, "%i\n", n % 10);
-	n = n/10;
+#include <iostream>
+using namespace std;
+
+void printBackwards(string n) {
+	for (int i = n.length() - 1; i != -1; --i) {
+		cout << n[i] << endl;
 	}
 }
 int main()
 {
-	int N;
-	fscanf(stdin, "%i", &N);
-	number1(N);
+	string number; cin >> number;
+	printBackwards(number);
 }

@@ -1,21 +1,15 @@
-#include <stdio.h>
-int number1(int n)
-{
-	int i = 0;
-	while(i<n){
-		int i1 = 0;
-		while(i1<n-1)
-		{
-			fprintf(stdout, "*");
-		i1++;	
+#include <iostream>
+using namespace std;
+
+void printSquare(int n) {
+	for (int i = 0; i < n; ++i) {
+		for (int j = 0; j < n; ++j) {
+			cout << '*';
 		}
-		fprintf(stdout, "*\n");
-		i++;
-		}
+		cout << '\n';
+	}
 }
-int main()
-{
-	int N;
-	fscanf(stdin, "%i", &N);
-	number1(N);
+int main() {
+	int N; cin >> N;
+	printSquare(N);
 }

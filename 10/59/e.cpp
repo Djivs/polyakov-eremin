@@ -1,19 +1,18 @@
-#include <stdio.h>
-#include <math.h>
-#pragma warning(disable: 4996)
-int number1(int n)
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+void printDividers(int n)
 {
-	int i = 1;
-	while (i <= n)
-	{
-		if (n % i == 0)
-			fprintf(stdout, "%i ", i);
-		i++;
+	cout << "1 ";
+	for (int i = 2; i <= n; ++i) {
+		if (!(n % i)) {
+			cout << i << ' ';
+		}
 	}
 }
 int main()
 {
-	int N;
-	fscanf(stdin, "%i", &N);
-	number1(N);
+	int N; cin >> N;
+	printDividers(N);
 }
